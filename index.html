@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HikeFinder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header>
+    <div class="container">
+      <img src="./assets/hf-logo-primary.svg" alt="" class="logo">
+      <nav>
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+          <span class="sr-only" aria-expanded="false">Menu</span>
+        </button>
+        <ul class="primary-navigation" id="primary-navigation" data-visible="false">
+          <li class="active">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li>
+            <a href="explore.html" class="nav-link">Explore</a>
+          </li>
+          <li>
+            <button class="button btn-primary">Sign up</button>
+          </li>
+          <li>
+            <button class="button">Log in</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <!-- full width bg hero image -->
+      <div class="container">
+        <div class="hero-content">
+          <h1>Find Your Next <span>Adventure</span></h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab libero unde neque at quam ducimus modi explicabo quos sunt quaerat pariatur obcaecati, autem incidunt.</p>
+        </div>
+        <form>
+          <div class="form-container">
+            <img src="./assets/search.png" alt="" class="search-icon">
+            <label for="" class="sr-only">Search</label>
+            <input type="text" placeholder="Search by city">
+            <button class="button search-btn">Search</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Hikes near Trinidad</h2>
+        <ul class="result-list-grid">
+          <li class="result-grid-item">
+            <img src="" alt="" class="result-image">
+            <div class="result-content">
+              <h3>Tall Trees Grove Loop Trail</h3>
+              <span class="result-meta">Length 3.6 mi - Est. 1h 52m</span>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id, pariatur mollitia quod laudantium quis sapiente quibusdam voluptates corporis ab fuga ea iste.</p>
+              <button class="button result-btn">Learn more</button>
+            </div>
+          </li>
+          <li class="result-grid-item">
+            <img src="" alt="" class="result-image">
+            <div class="result-content">
+              <h3>Trinidad Head Trail Loop</h3>
+              <span class="result-meta">Length 3.6 mi - Est. 1h 52m</span>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id, pariatur mollitia quod laudantium quis sapiente quibusdam voluptates corporis ab fuga ea iste.</p>
+              <button class="button result-btn">Learn more</button>
+            </div>
+          </li>
+          <li class="result-grid-item">
+            <img src="" alt="" class="result-image">
+            <div class="result-content">
+              <h3>Patrick's Point Rim Trail</h3>
+              <span class="result-meta">Length 3.6 mi - Est. 1h 52m</span>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id, pariatur mollitia quod laudantium quis sapiente quibusdam voluptates corporis ab fuga ea iste.</p>
+              <button class="button result-btn">Learn more</button>
+            </div>
+          </li>
+          
+        </ul>
+      </div>
+    </section>
+
+    <!-- features section -->
+    <section>
+      <div class="container">
+        <ul class="features-list">
+          <li class="feature-item">
+            <img src="" alt="" class="feature-icon">
+            <h4>Sign up for Notifications</h4>
+            <p><a href="#">Sign up</a> to get conditoins alerts, information on pop-up events and interesting stories.</p>
+          </li>
+          <li class="feature-item">
+            <img src="" alt="" class="feature-icon">
+            <h4>Get the HikeFinder App</h4>
+            <p><a href="#">Download the app</a> to get the most out of every minute outdoors with offline maps and more!</p>
+          </li>
+          <li class="feature-item">
+            <img src="" alt="" class="feature-icon">
+            <h4>Share Trails</h4>
+            <p><a href="#">Share your hiking adventures</a> with the community and keep a record of your travels.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="brand-container">
+        <img src="" alt="">
+        <p class="copy">Copyright <span>2023</span>. HikeFinder</p>
+      </div>
+      <nav>
+        <ul class="footer-nav">
+          <li><a href="#" class="link-button">Home</a></li>
+          <li><a href="#" class="link-button">Explore</a></li>
+          <li><a href="#" class="link-button">Log in</a></li>
+          <li><a href="#" class="link-button">Sign up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
