@@ -11,11 +11,11 @@
 </head>
 <body>
   
-  <header>
+  <header class="header">
     <div class="container">
       <img src="./assets/hf-logo-primary.svg" alt="" class="logo">
       <nav>
-        <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
           <span class="sr-only" aria-expanded="false">Menu</span>
         </button>
         <ul class="primary-navigation" id="primary-navigation" data-visible="false">
@@ -39,20 +39,20 @@
   <main>
     <section class="hero">
       <!-- full width bg hero image -->
-      <div class="container">
-        <div class="hero-content">
-          <h1>Find Your Next <span>Adventure</span></h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab libero unde neque at quam ducimus modi explicabo quos sunt quaerat pariatur obcaecati, autem incidunt.</p>
-        </div>
-        <form>
-          <div class="form-container">
-            <img src="./assets/search.png" alt="" class="search-icon">
-            <label for="" class="sr-only">Search</label>
-            <input type="text" placeholder="Search by city">
-            <button class="button search-btn">Search</button>
-          </div>
-        </form>
+
+      <div class="hero-content">
+        <h1>Find Your Next <span>Adventure</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ab libero unde neque at quam ducimus modi explicabo quos sunt quaerat pariatur obcaecati, autem incidunt.</p>
       </div>
+      <form>
+        <div class="form-container">
+          <img src="./assets/magnifying-glass.png" alt="" class="search-icon">
+          <label for="" class="sr-only">Search</label>
+          <input type="text" placeholder="Search by city">
+          <button class="button search-btn">Search</button>
+        </div>
+      </form>
+
     </section>
 
     <section>
@@ -60,7 +60,7 @@
         <h2>Hikes near Trinidad</h2>
         <ul class="result-list-grid">
           <li class="result-grid-item">
-            <img src="" alt="" class="result-image">
+            <img src="./assets/floyen.png" alt="" class="result-image">
             <div class="result-content">
               <h3>Tall Trees Grove Loop Trail</h3>
               <span class="result-meta">Length 3.6 mi - Est. 1h 52m</span>
@@ -69,7 +69,7 @@
             </div>
           </li>
           <li class="result-grid-item">
-            <img src="" alt="" class="result-image">
+            <img src="./assets/ulriken.png" alt="" class="result-image">
             <div class="result-content">
               <h3>Trinidad Head Trail Loop</h3>
               <span class="result-meta">Length 3.6 mi - Est. 1h 52m</span>
@@ -78,7 +78,7 @@
             </div>
           </li>
           <li class="result-grid-item">
-            <img src="" alt="" class="result-image">
+            <img src="./assets/landasfjellet.png" alt="" class="result-image">
             <div class="result-content">
               <h3>Patrick's Point Rim Trail</h3>
               <span class="result-meta">Length 3.6 mi - Est. 1h 52m</span>
@@ -96,17 +96,17 @@
       <div class="container">
         <ul class="features-list">
           <li class="feature-item">
-            <img src="" alt="" class="feature-icon">
+            <img src="./assets/bell-solid.svg" alt="" class="feature-icon">
             <h4>Sign up for Notifications</h4>
             <p><a href="#">Sign up</a> to get conditoins alerts, information on pop-up events and interesting stories.</p>
           </li>
           <li class="feature-item">
-            <img src="" alt="" class="feature-icon">
+            <img src="./assets/location-dot-solid.svg" alt="" class="feature-icon">
             <h4>Get the HikeFinder App</h4>
             <p><a href="#">Download the app</a> to get the most out of every minute outdoors with offline maps and more!</p>
           </li>
           <li class="feature-item">
-            <img src="" alt="" class="feature-icon">
+            <img src="./assets/share-solid.svg" alt="" class="feature-icon">
             <h4>Share Trails</h4>
             <p><a href="#">Share your hiking adventures</a> with the community and keep a record of your travels.</p>
           </li>
