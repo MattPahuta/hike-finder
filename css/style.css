@@ -170,65 +170,60 @@ h4 {
 } 
 
 /* Button Styles */
-.button {
+button.button {
 	border: none;
   padding: 0;
+  background-color: transparent;
 	cursor: pointer;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-  line-height: 1;
 	transition: 200ms all ease-in-out;
 }
 
-/* a.button {
-  font-family: inherit; 
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 10ch;
-
-}
-
-a.read-more-btn {
-  padding: 0.95em 2.25em;
-  color: var(--clr-white);
-  background-color: var(--clr-soft-red);
-  font-size: var(--fs-300);
-  text-transform: uppercase;
-  letter-spacing: 0.275rem;
-  font-weight: var(--fw-bold);  
-}
-
-a.read-more-btn:hover,
-a.read-more-btn:active {
-  background-color: var(--clr-dark-space-blue);
-}
-
-a.read-more-btn:focus {
-  outline-style: solid;
-  outline-color: transparent;
-  box-shadow: 0 0 0 4px var(--clr-dark-space-blue);
-}
-
-
 @media screen and (-ms-high-contrast: active) {
-  .button {
+  button.button {
     border: 2px solid currentcolor;
   }
-} */
+}
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+a.button {
+  text-decoration: none;
+}
+
+a.button,
+button.button {
+  display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+  background-color: var(--clr-green);
+  color: var(--clr-pure-white);
+  border-radius: var(--br-extra-soft);
+
+  text-align: center;
+  line-height: 1.1;
+  text-transform: uppercase;
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+  padding: 0.25em 1em;
+  min-width: 10ch;
+  min-height: 44px;
+
+  transition: 220ms all ease-in-out;
+}
+
+button.button:hover,
+button.button:active,
+a.button:hover,
+a.button:active {
+  cursor: pointer;
+  background-color: var(--clr-dark-green);
+}
+
+button.button:focus,
+a.button:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 4px var(--clr-dark-green);
 }
 
 /* Header Styles */
@@ -301,6 +296,10 @@ a.read-more-btn:focus {
 .hero-content h1 span {
   font-weight: var(--fw-600);
   color: var(--clr-yellow);
+}
+
+.hero-content p {
+  max-width: 36ch;
 }
 
 .search-icon {
@@ -387,6 +386,12 @@ a.read-more-btn:focus {
 
 .footer-nav a {
   color: var(--clr-pure-white);
+  transition: 220ms all ease-in-out;
+}
+
+.footer-nav a:hover,
+.footer-nav a:active {
+  color: var(--clr-green);
 }
 
 .copy {
