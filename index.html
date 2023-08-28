@@ -38,21 +38,20 @@
 
   <main>
     <section class="hero">
-      <!-- full width bg hero image -->
-
       <div class="hero-content">
         <h1>Find Your Next <span>Adventure</span></h1>
         <p>Your next hiking adventure awaits. Get on the trail with detailed maps and updates shared by hikers like you.</p>
       </div>
-      <form>
-        <div class="form-container">
-          <img src="./assets/magnifying-glass.png" alt="" class="search-icon">
+      <div class="form-container">
+        <form class="search-form">
+          <div class="icon-container">
+            <img src="./assets/magnifying-glass.png" alt="" class="search-icon">
+          </div>
           <label for="" class="sr-only">Search</label>
           <input type="text" placeholder="Search by city">
           <button class="button search-btn">Search</button>
-        </div>
-      </form>
-
+        </form>
+      </div>
     </section>
 
     <section class="results">
@@ -65,7 +64,7 @@
               <h3>Tall Trees Grove Loop Trail</h3>
               <p class="result-meta">Length 3.6 mi - Est. 1h 52m</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id, pariatur mollitia quod laudantium quis sapiente quibusdam voluptates corporis ab fuga ea iste.</p>
-              <a class="button result-btn">Learn more</a>
+              <button class="button result-btn">Learn more</button>
             </div>
           </li>
           <li class="result-grid-item">
@@ -74,7 +73,7 @@
               <h3>Trinidad Head Trail Loop</h3>
               <p class="result-meta">Length 3.6 mi - Est. 1h 52m</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id, pariatur mollitia quod laudantium quis sapiente quibusdam voluptates corporis ab fuga ea iste.</p>
-              <a class="button result-btn">Learn more</a>
+              <button class="button result-btn">Learn more</button>
             </div>
           </li>
           <li class="result-grid-item">
@@ -83,7 +82,7 @@
               <h3>Patrick's Point Rim Trail</h3>
               <p class="result-meta">Length 3.6 mi - Est. 1h 52m</p>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis id, pariatur mollitia quod laudantium quis sapiente quibusdam voluptates corporis ab fuga ea iste.</p>
-              <a class="button result-btn">Learn more</a>
+              <button class="button result-btn">Learn more</button>
             </div>
           </li>
           
@@ -120,15 +119,15 @@
     <div class="container footer-container">
       <nav>
         <ul class="footer-nav">
-          <li><a href="#" class="link-button">Home</a></li>
-          <li><a href="#" class="link-button">Explore</a></li>
-          <li><a href="#" class="link-button">Log in</a></li>
-          <li><a href="#" class="link-button">Sign up</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Explore</a></li>
+          <li><a href="#">Log in</a></li>
+          <li><a href="#">Sign up</a></li>
         </ul>
       </nav>
       <div class="brand-container">
         <img src="./assets/hf-logo-primary-light.svg" alt="">
-        <p class="copy">Copyright <span>2023</span>. HikeFinder</p>
+        <p class="copy">Copyright <span id="date-year">2023</span>. HikeFinder</p>
       </div>
     </div>
   </footer>

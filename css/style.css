@@ -33,6 +33,9 @@ Date:
   --clr-yellow: hsl(42, 100%, 66%);
   --clr-red: hsl(8, 55%, 39%);
 
+  --box-shadow-green: hsla(145, 41%, 22%, 0.8);
+  --box-shadow-yellow: hsla(42, 100%, 66%, 0.8);
+
   /* Neutral Colors */
   --clr-pure-white: hsl(0, 0%, 100%);
   --clr-soft-white: hsl(0, 0%, 98%);
@@ -201,14 +204,15 @@ button.button {
   text-align: center;
   line-height: 1.1;
   text-transform: uppercase;
-
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-
-  padding: 0.25em 1em;
   min-width: 10ch;
-  min-height: 44px;
 
   transition: 220ms all ease-in-out;
+}
+
+button.result-btn {
+  padding: 0.25em 1em;
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
 
 button.button:hover,
@@ -223,7 +227,7 @@ button.button:focus,
 a.button:focus {
   outline-style: solid;
   outline-color: transparent;
-  box-shadow: 0 0 0 4px var(--clr-dark-green);
+  box-shadow: 0 0 0 3px var(--clr-dark-green);
 }
 
 /* Header Styles */
@@ -284,11 +288,13 @@ a.button:focus {
   padding: 4rem 1rem;
   /* backdrop-filter: brightness(50%); */
   color: var(--clr-soft-white);
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
 
 }
 
 .hero-content h1 {
+  margin-bottom: 1rem;
+  max-width: 20ch;
   font-size: var(--fs-900);
   font-weight: var(--fw-400);
 }
@@ -302,11 +308,56 @@ a.button:focus {
   max-width: 36ch;
 }
 
+/* Search Form */
+.form-container {
+  padding: 3.25rem 0;
+}
+
+.search-form {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+}
+
+.icon-container {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  display: grid;
+  place-items: center;
+}
+
 .search-icon {
   max-width: 2rem;
 }
 
-/* Search Form */
+.search-form input {
+  width: 100%;
+  padding: 0.75rem 7rem 0.75rem 2.5rem;
+  line-height: 1;
+  border: none;
+  border-radius: var(--br-extra-soft);
+  transition: 180ms box-shadow ease-in-out;
+}
+
+.search-form input:focus {
+  border-color: var(--clr-dark-green);
+
+  box-shadow: 0 0 0 4px var(--clr-green);
+  outline: 4px solid transparent;
+}
+
+.search-btn {
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  right: 5px;
+  aspect-ratio: 1;
+
+}
+
 
 /* Results Section */
 
@@ -326,6 +377,7 @@ a.button:focus {
 
 .result-btn {
   margin-top: 1rem;
+  min-height: 44px;
 }
 
 /* Features Section */
