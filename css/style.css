@@ -164,7 +164,9 @@ h4 {
 
 
 /* Components and Utility Classes */
-
+.no-scroll {
+  overflow: hidden;
+}
 
 .sr-only {
   position: absolute;
@@ -246,12 +248,29 @@ button.btn-secondary:focus {
   padding: 1.25em 1em;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   max-width: 12rem;
 }
 
 
+
 /* Navigation */
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-navigation {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+}
+
 .primary-navigation a,
 .nav-button {
   font-size: var(--fs-500);
@@ -269,13 +288,14 @@ button.btn-secondary:focus {
   color: var(--clr-green);
 }
 
-.primary-navigation a:focus {
+.primary-navigation a:focus,
+.footer-nav a:focus {
   outline: 3px solid var(--clr-green);
   outline-offset: 3px;
 }
 
 
-@media (max-width: 48rem) {
+@media (max-width: 52rem) {
   
   .mobile-nav-toggle {
     display: block;
@@ -298,15 +318,17 @@ button.btn-secondary:focus {
     margin: 0;
     position: fixed;
     z-index: 1;
-    display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1.5rem;
     inset: 0 0 0 30%;
     transform: translateX(100%);
     transition: transform 500ms ease-in-out;
 
     background-color: var(--clr-soft-white);
-    padding: 3rem 1.5rem;
+    padding: 4em 1.5em;
+
+    /* backdrop-filter */
 
   }
 
