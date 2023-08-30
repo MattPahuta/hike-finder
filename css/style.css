@@ -14,6 +14,7 @@ Date:
   /* FONT SIZES */
   --fs-300: 0.9125rem;
   --fs-400: 1rem;
+  --fs-450: 1.125rem;
   --fs-500: 1.25rem;
   --fs-600: 2rem;
   --fs-700: 2.25rem;
@@ -58,6 +59,7 @@ Date:
 @media (min-width: 48rem) {
   :root {
     --fs-400: 1.125rem;
+    --fs-450: 1.25rem;
     --fs-500: 1.5rem;
     --fs-600: 1.75rem;
     --fs-700: 2.5rem;
@@ -192,73 +194,52 @@ button.button {
   }
 }
 
-a.button {
-  text-decoration: none;
-}
-
-a.button,
 button.button {
   display: inline-flex;
 	align-items: center;
 	justify-content: center;
-
-  background-color: var(--clr-green);
-  color: var(--clr-pure-white);
+  padding: 0.25em 1em;
   border-radius: var(--br-extra-soft);
-
   text-align: center;
   line-height: 1.1;
   text-transform: uppercase;
   min-width: 10ch;
   min-height: 44px;
   transition: 220ms all ease-in-out;
-}
-
-button.result-button {
-  padding: 0.25em 1em;
+  background-color: transparent;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
 }
 
-/* Note: Don't think I need a.button classes */
-button.button:hover,
-button.button:active,
-a.button:hover,
-a.button:active {
+button.btn-primary {
+  background-color: var(--clr-green);
+  color: var(--clr-pure-white);
+}
+
+button.btn-secondary {
+  color: var(--clr-rich-black);
+  border: 2px solid var(--clr-rich-black);
+}
+
+button.btn-primary:hover,
+button.btn-primary:active {
   cursor: pointer;
   background-color: var(--clr-dark-green);
 }
 
-button.button:focus,
-a.button:focus {
-  outline-style: solid;
-  outline-color: transparent;
-  box-shadow: 0 0 0 3px var(--clr-dark-green);
-}
-
-/* same as result-button - move to buttons section? */
-.button.nav-button {
-  padding: 0.25em 1em;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-}
-
-button.auth-button {
-  color: var(--clr-rich-black);
-  background-color: transparent;
-  border: 2px solid var(--clr-rich-black);
-}
-
-button.auth-button:focus,
-button.auth-button:active {
+button.btn-secondary:hover,
+button.btn-secondary:active {
   color: var(--clr-pure-white);
-  background: var(--clr-green);
+  background: var(--clr-dark-green);
   border: none;
 }
 
-.result-button {
-  margin-top: 1rem;
-  min-height: 44px;
+button.btn-primary:focus,
+button.btn-secondary:focus {
+  outline-style: solid;
+  outline-color: transparent;
+  box-shadow: 0 0 0 3px var(--clr-dark-green);
+  border: none;
 }
-
 
 /* Header Styles */
 .header {
@@ -271,17 +252,27 @@ button.auth-button:active {
 
 
 /* Navigation */
-.nav-link,
+.primary-navigation a,
 .nav-button {
   font-size: var(--fs-500);
   font-weight: 500;
   text-transform: uppercase;
 }
 
-.nav-link {
+.primary-navigation a {
   color: var(--clr-rich-black);
+  transition: 220ms all ease-in-out;
 }
 
+.primary-navigation a:hover,
+.primary-navigation a:active {
+  color: var(--clr-green);
+}
+
+.primary-navigation a:focus {
+  outline: 3px solid var(--clr-green);
+  outline-offset: 3px;
+}
 
 
 @media (max-width: 48rem) {
@@ -394,7 +385,7 @@ button.auth-button:active {
 
 .search-form input {
   width: 100%;
-  padding: 1rem 7rem 1rem 2.5rem;
+  padding: 1em 7.5em 1em 2.5em;
   line-height: 1;
   border: none;
   border-radius: var(--br-extra-soft);
@@ -403,12 +394,13 @@ button.auth-button:active {
 
 .search-form input:focus {
   border-color: var(--clr-dark-green);
-
   box-shadow: 0 0 0 4px var(--clr-green);
   outline: 4px solid transparent;
 }
 
-button.search-button {
+.btn-search {
+  font-size: var(--fs-450);
+  font-weight: var(--fw-500);
   height: 80%;
   position: absolute;
   top: 10%;
@@ -458,6 +450,10 @@ button.search-button {
   margin-bottom: 1.25rem;
   font-size: var(--fs-500);
   color: var(--clr-rich-black);
+}
+
+.result-content button {
+  margin-top: 1rem;
 }
 
 
