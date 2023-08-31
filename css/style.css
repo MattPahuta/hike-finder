@@ -516,7 +516,7 @@ button.btn-secondary:focus {
 
 /* Footer Styles */
 .footer {
-  padding: 3.5rem 0;
+  padding: 3.5em 1em;
   background: var(--clr-rich-black);
   color: var(--clr-pure-white);
 }
@@ -562,4 +562,14 @@ button.btn-secondary:focus {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer-container nav {
+    order: 1;
+  }
 }
+
