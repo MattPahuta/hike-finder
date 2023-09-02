@@ -26,6 +26,13 @@ Users should be able to:
 - Example: View the optimal layout for the interface depending on their device's screen size
 - Example: See hover and focus states for all interactive elements on the page
 
+Additional customization and enhancements
+
+- Updated design, typography, layout
+- Use of dialog and modal elements
+- Symantic forms with basic client-side form validation
+
+
 ### Screenshot
 
 ![](./screenshot.jpg)
@@ -50,6 +57,15 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 
 
 ### What I learned
+
+Continued experience with CSS Grid and Flexbox. 
+
+#### Results section - home page
+
+Given this section is meant to simulate a list of search results, it seemed important semantically to make this an unordered list. 
+
+At first look of the design comp, it seemed like Grid was the best option to produce the offset layout of each result item. However, once I began experimenting, Flexbox ended up a cleaner and more efficient solution. I simply needed to allow the images in each list item to grow naturally and proportionately and utilize the order property on the 2nd list item's image to produce the offset effect, with minimal code.
+
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 

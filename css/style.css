@@ -56,14 +56,14 @@ Date:
 
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 60rem) {
   :root {
     --fs-400: 1.125rem;
     --fs-450: 1.25rem;
     --fs-500: 1.5rem;
-    --fs-600: 1.75rem;
+    --fs-600: 2.25rem;
     --fs-700: 2.5rem;
-    --fs-800: 3rem;
+    --fs-800: 3.25rem;
     --fs-900: 4rem;
   }
 }
@@ -125,8 +125,13 @@ body {
   max-width: 90rem;
 }
 
+.results-container,
+.features-container {
+  padding: 0 1rem;
+}
+
 .primary-navigation,
-.result-list-grid,
+.result-list,
 .features-list,
 .footer-nav {
   list-style: none;
@@ -245,7 +250,7 @@ button.btn-secondary:focus {
 
 /* Header Styles */
 .header {
-  padding: 1.25em 1em;
+  padding: 1.75em 1em;
 }
 
 .header-container {
@@ -389,7 +394,7 @@ button.btn-secondary:focus {
   margin: 0 auto;
   position: relative;
   width: 90%;
-  max-width: 500px;
+  max-width: 550px;
 }
 
 .icon-container {
@@ -439,7 +444,7 @@ button.btn-secondary:focus {
   }
 
   .hero-content {
-    padding: 9.25rem 2.75rem;
+    padding: 9.25rem 1rem 9.25rem 2.75rem;
   }
 
   .form-container {
@@ -451,16 +456,19 @@ button.btn-secondary:focus {
 
 
 /* Results Section */
-.results {
-  padding: 2em 1em;
+
+.results-container {
+  padding: 2rem 1rem;
 }
 
-.result-list-grid {
-  display: grid;
-  gap: 2rem;
+.result-item:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .result-image {
+  width: 100%;
+  max-width: 46.25rem;
+  object-fit: cover;
   border-radius: var(--br-soft);
 }
 
@@ -474,17 +482,47 @@ button.btn-secondary:focus {
   color: var(--clr-rich-black);
 }
 
+.result-content p {
+  max-width: 52ch;
+}
+
 .result-content button {
   margin-top: 1rem;
 }
 
+@media (min-width: 60rem) {
 
+  .result-item {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+
+  }
+
+  /* .result-content {
+    padding: 0 3.5rem 0 0;
+  } */
+
+  .result-content p {
+    max-width: 36ch;
+  }
+
+  .result-item:nth-of-type(2n) {
+    justify-content: flex-end;
+  }
+  .result-item:nth-of-type(2n) img {
+    order: 1;
+  }
+}
 
 /* Features Section */
 .features {
-  padding: 4em 1em;
   background: var(--clr-soft-white);
   text-align: center;
+}
+
+.features-container {
+  padding: 4rem 1rem;
 }
 
 .features-list {
@@ -516,12 +554,13 @@ button.btn-secondary:focus {
 
 /* Footer Styles */
 .footer {
-  padding: 3.5em 1em;
+  /* padding: 3.5em 1em; */
   background: var(--clr-rich-black);
   color: var(--clr-pure-white);
 }
 
 .footer-container {
+  padding: 3.5em 1em; 
   display: flex;
   flex-direction: column;
   align-items: center;
