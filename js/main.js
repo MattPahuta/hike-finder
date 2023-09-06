@@ -18,3 +18,8 @@ navToggle.addEventListener('click', () => {
   // console.log('toggle clicked')
   // console.log(visibility)
 });
+
+
+// *** Copyright Date *** // 
+const dateSnapshot = new Date();
+document.getElementById('copy-year').textContent = dateSnapshot.getFullYear();

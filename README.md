@@ -62,7 +62,7 @@ Continued experience with CSS Grid and Flexbox.
 
 #### Results section - home page
 
-Given this section is meant to simulate a list of search results, it seemed important semantically to make this an unordered list. 
+Given this section is meant to simulate a list of search results, it seemed important semantically to make this an unordered list. There were a couple of approaches I considered for the layout of this section. On larger screens, the design comp indicates that the list of results should alternate image/content orientation, producing a slight overlapping effect. 
 
 At first look of the design comp, it seemed like Grid was the best option to produce the offset layout of each result item. However, once I began experimenting, Flexbox ended up a cleaner and more efficient solution. I simply needed to allow the images in each list item to grow naturally and proportionately and utilize the order property on the 2nd list item's image to produce the offset effect, with minimal code.
 

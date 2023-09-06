@@ -638,6 +638,32 @@ button.btn-secondary:focus {
   color: var(--clr-silver);
 }
 
+
+
+/* Explore Page-specific Styles */
+
+.result-meta {
+  display: flex;
+  align-items: center;
+}
+
+.result-meta .level {
+  display: flex;
+}
+
+.result-meta .level::after {
+  content: url('../assets/star-solid.svg');
+  margin: 0 0.5rem;
+  display: inline-flex;
+  width: 2.25rem;
+}
+
+/* .result-meta .rating img {
+  display: inline-flex;
+} */
+
+
+
 @media (min-width: 48rem) {
   .features-list {
     grid-auto-flow: column;

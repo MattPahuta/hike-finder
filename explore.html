@@ -23,6 +23,7 @@
             <a href="index.html" class="nav-link">Home</a>
           </li>
           <li>
+            <!-- make this link active -->
             <a href="explore.html" class="nav-link">Explore</a>
           </li>
           <li>
@@ -42,16 +43,7 @@
         <h1>Find Your Next <span>Adventure</span></h1>
         <p>Your next hiking adventure awaits. Get on the trail with detailed maps and updates shared by hikers like you.</p>
       </div>
-      <div class="form-container">
-        <form class="search-form">
-          <div class="icon-container">
-            <img src="./assets/magnifying-glass.png" alt="" class="search-icon">
-          </div>
-          <label for="" class="sr-only">Search</label>
-          <input type="text" placeholder="Search by city">
-          <button class="button btn-primary btn-search">Search</button>
-        </form>
-      </div>
+      <!-- <div class="hero-spacer"></div> -->
     </section>
 
     <section class="results explore-results">
@@ -64,13 +56,18 @@
             <img src="./assets/tryon-creek.jpg" alt="" class="result-image">
             <div class="result-content">
               <h3>Tryon Creek State Area</h3>
-              <p class="result-meta explore-meta">
-                <span class="level">Moderate </span>
-                <span class="rating">
+              <div class="result-meta rating-container">
+                <span class="level">Moderate </span><span class="rating">4.5 (428)
+                </span>
+
+                <!-- make star icon a pseudo element??? -->
+                <!-- <span class="rating">
                   <img src="./assets/star-solid.svg" alt="">
                   4.5 (428)
-                </span>
-              </p>
+                </span> -->
+              </div>
+              <!-- <p class="result-meta explore-meta">
+              </p> -->
               <p>670-acre forested area along a ravine with well-maintained trails for hikers, horses & leashed dogs.
               </p>
             </div>
@@ -80,11 +77,8 @@
             <div class="result-content">
               <h3>Marquam Nature Park</h3>
               <p class="result-meta explore-meta">
-                <span class="level">Easy </span>
-                <span class="rating">
-                  <img src="./assets/star-solid.svg" alt="">
-                  4.3 (432)
-                </span>
+                <span class="level">Easy</span>
+                <span class="rating">4.3 (432)</span>
               </p>
               <p>193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.</p>
             </div>
@@ -94,11 +88,8 @@
             <div class="result-content">
               <h3>Wildwood Trail Area</h3>
               <p class="result-meta explore-meta">
-                <span class="level">Easy </span>
-                <span class="rating">
-                  <img src="./assets/star-solid.svg" alt="">
-                  4.0 (207)
-                </span>
+                <span class="level">Easy</span>
+                <span class="rating">4.0 (207)</span>
               </p>
               <p>The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.</p>
             </div>
@@ -145,7 +136,7 @@
       </nav>
       <div class="brand-container">
         <img src="./assets/HF-Primary-Alt.svg" alt="" class="logo">
-        <p class="copy">Copyright <span id="date-year">2023</span>. HikeFinder</p>
+        <p class="copy">Copyright <span id="copy-year"></span>. HikeFinder</p>
       </div>
     </div>
   </footer>
