@@ -48,14 +48,15 @@
 
     <section class="results explore-results">
       <!-- Make this container, results-container on the section? -->
-      <div class="container results-container">
-        <h2>Explore Nearby Trails</h2>
-        <ul class="result-list">
+      <h2 class="explore-title">Explore Nearby Trails</h2>
+      <!-- flex-container - explore ul and image -->
+      <div class="container explore-container">
+        <ul class="result-list explore-list">
 
-          <li class="result-item">
+          <li class="">
             <!-- result card -->
             <div class="explore-card">
-              <img src="./assets/tryon-creek.jpg" alt="" class="result-image card-image">
+              <img src="./assets/tryon-creek.jpg" alt="" class="card-image">
               <div class="card-header">
                 <h3>Tryon Creek State Area</h3>
                 <div class="card-meta rating-container">
@@ -67,9 +68,9 @@
             </div>
           </li>
 
-          <li class="result-item">
+          <li class="">
             <div class="explore-card">
-              <img src="./assets/marquam.jpg" alt="" class="result-image card-image">
+              <img src="./assets/marquam.jpg" alt="" class="card-image">
               <div class="card-header">
                 <h3>Marquam Nature Park</h3>
                 <div class="card-meta rating-container">
@@ -80,9 +81,9 @@
               <p class="card-body">193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.</p>
             </div>
           </li>
-          <li class="result-item">
+          <li class="">
             <div class="explore-card">
-              <img src="./assets/wildwood.jpg" alt="" class="result-image card-image">
+              <img src="./assets/wildwood.jpg" alt="" class="card-image">
               <div class="card-header">
                 <h3>Wildwood Trail Area</h3>
                 <div class="card-meta rating-container">
@@ -93,9 +94,13 @@
               <p class="card-body">The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.</p>
             </div>
           </li>
-          
         </ul>
+        <!-- Google Map -->
+        <!-- Placeholder image for future dynamic map -->
+        <img class="hikes-map" src="./assets/google-map-placeholder.png" alt="">
+
       </div>
+
     </section>
 
     <!-- features section -->
