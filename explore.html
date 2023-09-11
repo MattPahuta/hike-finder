@@ -6,7 +6,7 @@
   <title>HikeFinder | Explore</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -49,55 +49,50 @@
     <section class="results explore-results">
       <!-- Make this container, results-container on the section? -->
       <h2 class="explore-title">Explore Nearby Trails</h2>
-      <!-- flex-container - explore ul and image -->
-      <div class="container explore-container">
-        <ul class="result-list explore-list">
 
-          <li class="">
-            <!-- result card -->
-            <div class="explore-card">
-              <img src="./assets/tryon-creek.jpg" alt="" class="card-image">
-              <div class="card-header">
-                <h3>Tryon Creek State Area</h3>
-                <div class="card-meta rating-container">
-                  <span class="level">Moderate</span><span class="rating">4.5 (428)</span>
-                </div>
-              </div>
-              <p class="card-body">670-acre forested area along a ravine with well-maintained trails for hikers, horses & leashed dogs.</p>
-
-            </div>
-          </li>
-
-          <li class="">
-            <div class="explore-card">
-              <img src="./assets/marquam.jpg" alt="" class="card-image">
-              <div class="card-header">
-                <h3>Marquam Nature Park</h3>
-                <div class="card-meta rating-container">
-                  <span class="level">Easy</span>
-                  <span class="rating">4.3 (432)</span>
-                </div>
-              </div>
-              <p class="card-body">193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.</p>
-            </div>
-          </li>
-          <li class="">
-            <div class="explore-card">
-              <img src="./assets/wildwood.jpg" alt="" class="card-image">
-              <div class="card-header">
-                <h3>Wildwood Trail Area</h3>
-                <div class="card-meta rating-container">
-                  <span class="level">Easy</span>
-                  <span class="rating">4.0 (207)</span>
-                </div>
-              </div>
-              <p class="card-body">The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.</p>
-            </div>
-          </li>
-        </ul>
+      
+      <div class="container explore-results-wrapper">
         <!-- Google Map -->
         <!-- Placeholder image for future dynamic map -->
-        <img class="hikes-map" src="./assets/google-map-placeholder.png" alt="">
+        <div class="map-container">
+          <img class="hikes-map" src="./assets/google-map-placeholder.png" alt="">
+        </div>
+
+
+        <ul class="explore-list">
+          <li class="explore-card">
+            <img src="./assets/tryon-creek.jpg" alt="" class="card-image">
+            <div class="card-header">
+              <h3>Tryon Creek State Area</h3>
+              <div class="card-meta rating-container">
+                <span class="level">Moderate</span><span class="rating">4.5 (428)</span>
+              </div>
+            </div>
+            <p class="card-body">670-acre forested area along a ravine with well-maintained trails for hikers, horses & leashed dogs.</p>
+          </li>
+          <li class="explore-card">
+            <img src="./assets/marquam.jpg" alt="" class="card-image">
+            <div class="card-header">
+              <h3>Marquam Nature Park</h3>
+              <div class="card-meta rating-container">
+                <span class="level">Easy</span>
+                <span class="rating">4.3 (432)</span>
+              </div>
+            </div>
+            <p class="card-body">193 acres of undeveloped land & over 5 miles of hiking trails with forested scenic views.</p>
+          </li>
+          <li class="explore-card">
+            <img src="./assets/wildwood.jpg" alt="" class="card-image">
+            <div class="card-header">
+              <h3>Wildwood Trail Area</h3>
+              <div class="card-meta rating-container">
+                <span class="level">Easy</span>
+                <span class="rating">4.0 (207)</span>
+              </div>
+            </div>
+            <p class="card-body">The Wildwood Trail starts at the Vietnam Memorial adjacent to the Oregon Zoo and World Forestry Center and circles uphill.</p>
+          </li>
+        </ul>
 
       </div>
 
