@@ -23,3 +23,6 @@ navToggle.addEventListener('click', () => {
 // *** Copyright Date *** // 
 const dateSnapshot = new Date();
 document.getElementById('copy-year').textContent = dateSnapshot.getFullYear();
+
+
+ 
