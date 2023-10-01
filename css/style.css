@@ -63,6 +63,7 @@ Date:
 @media (min-width: 38.75rem) {
   :root {
     --fs-400: 1.125rem;
+    --fs-550: 1.75rem;
     --fs-600: 2.25rem;
     --fs-700: 2.5rem;
     --fs-800: 3rem;
@@ -74,6 +75,7 @@ Date:
   :root {
     --fs-450: 1.25rem;
     --fs-500: 1.5rem;
+    --fs-550: 2rem;
     --fs-600: 2.5rem;
     --fs-700: 2.75rem;
     --fs-800: 3.25rem;
@@ -130,17 +132,9 @@ body {
   color: var(--clr-dark-gray);
 }
 
-
-
 .container {
-  /* padding: 0 1em; */
   margin: 0 auto;
   max-width: 90rem;
-}
-
-.results-container,
-.features-container {
-  padding: 0 1rem;
 }
 
 .primary-navigation,
@@ -161,19 +155,8 @@ h1, h2, h3, h4, h5 {
   line-height: 1.2;
 }
 
-h2 {
-  /* font-size: var(--fs-700); */
-  font-weight: 500;
-}
-
-h3 {
-  margin-bottom: 0.5rem;
-  font-weight: var(--fw-500);
-  color: var(--clr-rich-black);
-}
 
 h4 {
-
   font-size: var(--fs-500);
   font-weight: var(--fw-500);
   color: var(--clr-rich-black);
@@ -274,8 +257,6 @@ button.btn-secondary:focus {
   max-width: 12rem;
 }
 
-
-
 /* Navigation */
 .mobile-nav-toggle {
   display: none;
@@ -362,7 +343,6 @@ button.btn-secondary:focus {
     outline-offset: 5px;
   }
 }
-
 
 /* Hero Section Styles */
 .hero {
@@ -469,14 +449,26 @@ button.btn-secondary:focus {
 
 /* Results Section */
 
-.results-container {
+/* .results-container {
   padding: 3em 1em;
+} */
+
+.results-section {
+  padding: 3rem 1rem;
+  display: grid;
+  place-content: center;
 }
 
-.results-container {
+.results-section h2 {
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-700);
+  font-weight: var(--fw-600);
+}
+
+/* .results-container {
   display: grid;
   justify-content: center;
-}
+} */
 
 
 
@@ -495,6 +487,13 @@ button.btn-secondary:focus {
 
 .result-content {
   padding: 2rem 1rem 0;
+}
+
+.result-content h3 {
+  margin-bottom: 0.25rem;
+  font-size: var(--fs-550);
+  font-weight: var(--fw-600);
+  color: var(--clr-rich-black);
 }
 
 .result-meta {
@@ -628,9 +627,10 @@ button.btn-secondary:focus {
 
 @media (min-width: 60rem) {
 
-  .results-container {
-    justify-content: stretch;
+  .results-section {
+    place-content: stretch;
   }
+
 
   /* *** Grid Solution *** */
   .result-item {
