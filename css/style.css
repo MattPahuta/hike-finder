@@ -492,24 +492,28 @@ button.btn-secondary:focus {
   font-weight: var(--fw-600);
 }
 
-/* .results-container {
-  display: grid;
-  justify-content: center;
-} */
-
 
 
 .result-item:not(:last-child) {
   margin-bottom: 3em;
 }
 
-/* ToDo: Add scale hover effect for result, explore images */
+.result-img-container {
+  border-radius: var(--br-soft);
+  overflow: hidden;
+}
 
 .result-image {
   width: 100%;
   max-width: 46.25rem;
   object-fit: cover;
   border-radius: var(--br-soft);
+
+  transition: 750ms all ease-in-out;
+}
+
+.result-image:hover {
+  transform: scale(1.2);
 }
 
 .result-content {
