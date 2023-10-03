@@ -356,8 +356,14 @@ button.btn-secondary:focus {
   background-position: center;
 }
 
-.hero-content {
+.hero-content-split {
+  display: grid;
+  gap: 4rem;
   padding: 4rem 1rem;
+}
+
+.hero-content {
+  /* padding: 4rem 1rem; */
   color: var(--clr-soft-white);
 }
 
@@ -379,14 +385,12 @@ button.btn-secondary:focus {
 
 /* Search Form */
 .form-container {
-  padding: 3.25rem 0;
+  /* padding: 3.25rem 0; */
+  max-width: 550px;
 }
 
 .search-form {
-  margin: 0 auto;
   position: relative;
-  width: 90%;
-  max-width: 550px;
 }
 
 .icon-container {
@@ -448,8 +452,9 @@ button.btn-secondary:focus {
   }
 
   .hero-content-split {
-    display: grid;
+    padding: 0;
     grid-template-columns: 1fr 1fr;
+    gap: 0;
   }
 
   .hero-content {
@@ -458,6 +463,8 @@ button.btn-secondary:focus {
   }
 
   .form-container {
+    width: 90%;
+    justify-self: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
