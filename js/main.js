@@ -19,6 +19,13 @@ navToggle.addEventListener('click', () => {
   // console.log(visibility)
 });
 
+// Signup and Login button interaction
+const signUpBtn = document.getElementById('signup-btn');
+const logInBtn = document.getElementById('login-btn');
+
+signUpBtn.addEventListener('click', () => {
+  console.log('clicked')
+});
 
 // *** Copyright Date *** // 
 const dateSnapshot = new Date();
