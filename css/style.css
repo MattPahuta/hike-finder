@@ -39,10 +39,10 @@ Date: 10/7/2023
   /* Neutral Colors */
   --clr-pure-white: hsl(0, 0%, 100%);
   --clr-soft-white: hsl(0, 0%, 98%);
+  --clr-lightest-gray: hsl(228, 22%, 95%);
   --clr-silver: hsl(0, 0%, 80%);
   --clr-dark-gray: hsl(0, 0%, 31%);
-  /* keep blue-black or gunmetal - too similar */
-  --clr-blue-black: hsl(192, 5%, 19%);
+
   --clr-gunmetal: hsl(185, 14%, 17%);
   --clr-rich-black: hsl(218, 22%, 7%);
   --clr-pure-black: hsl(0, 0%, 0%);
@@ -126,6 +126,10 @@ body {
 .container {
   margin: 0 auto;
   max-width: 90rem;
+}
+
+a {
+  transition: 220ms all ease-in-out;
 }
 
 .primary-navigation,
@@ -276,16 +280,16 @@ button.btn-secondary:focus-visible {
 
 .primary-navigation a {
   color: var(--clr-rich-black);
-  transition: 220ms all ease-in-out;
+  /* transition: 220ms all ease-in-out; */
 }
 
 .primary-navigation a:hover,
-.primary-navigation a:active {
+.primary-navigation a:focus-visible {
   color: var(--clr-green);
 }
 
-.primary-navigation a:focus,
-.footer-nav a:focus {
+.primary-navigation a:focus-visible,
+.footer-nav a:focus-visible {
   outline: 3px solid var(--clr-green);
   outline-offset: 3px;
 }
@@ -778,4 +782,106 @@ button.btn-secondary:focus-visible {
   .feature-icon {
     width: 55px;
   }
+}
+
+/* Signup/Login form modals */
+dialog {
+  z-index: 100;
+  width: 90%;
+  max-width: 600px;
+  margin: 5em auto 0 auto;
+  padding: 50px;
+
+  border: none;
+  border-radius: var(--br-extra-soft);
+  background-color: var(--clr-soft-white);
+  color: var(--clr-rich-black);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+dialog::backdrop {
+  background-color: hsl(250, 100%, 50%, 0.25);
+}
+
+dialog h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: var(--fs-600);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form label {
+  margin-bottom: 0.5em;
+  font-size: var(--fs-450);
+}
+
+.modal-form input {
+  padding: 0.675em;
+  border: none;
+  border-radius: var(--br-extra-soft);
+  margin-bottom: 1.25em;
+  font-size: var(--fs-400);
+  color: var(--clr-pure-black);
+  background-color: #CBD0B9;
+}
+
+.modal-form input:last-of-type {
+  margin-bottom: 2em;
+}
+
+.modal-form input:focus-visible {
+  box-shadow: 0 0 0 4px var(--clr-green);
+  outline: 4px solid var(--clr-green);
+
+}
+
+button.btn-auth {
+  margin-bottom: 1.5em;
+  border-radius: 999em;
+}
+
+.modal-form p {
+  color: var(--clr-dark-gray);
+}
+
+.modal-form p:first-of-type {
+  margin-bottom: 1em;
+}
+
+.modal-form .disclaimer {
+  font-size: var(--fs-300);
+}
+
+.modal-form a {
+  color: var(--clr-rich-black);
+}
+
+.modal-form a:hover,
+.modal-form a:focus-visible {
+  color: var(--clr-green);
+}
+
+.modal-form a:focus-visible {
+  outline: 2px solid var(--clr-green);
+}
+
+button.btn-auth-secondary {
+  background-color: var(--clr-soft-white);
+  color: var(--clr-rich-black);
+  text-transform: none; 
+  box-shadow: none;
+}
+
+button.btn-auth-secondary:hover,
+button.btn-auth-secondary:focus-visible {
+  background-color: var(--clr-lightest-gray);
 }

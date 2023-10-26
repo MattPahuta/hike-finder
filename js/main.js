@@ -23,13 +23,16 @@ navToggle.addEventListener('click', () => {
 const signUpBtn = document.getElementById('signup-btn');
 const logInBtn = document.getElementById('login-btn');
 
-signUpBtn.addEventListener('click', () => {
-  console.log('clicked')
-});
+// Show signup form modal
+function showSignUpModal() {
+  const signUpModal = document.getElementById('signup-modal');
+  signUpModal.showModal();
+}
 
-// *** Copyright Date *** // 
+// Copyright date
 const dateSnapshot = new Date();
 document.getElementById('copy-year').textContent = dateSnapshot.getFullYear();
 
-
+// Event Listeners
+signUpBtn.addEventListener('click', showSignUpModal);
  
