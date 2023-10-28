@@ -1,6 +1,6 @@
 /*
 Author: Matt Pahuta
-Date: 10/7/2023
+Date: October 2023
 */
 /* **************** */
 /* Custom Variables */
@@ -791,7 +791,6 @@ dialog {
   max-width: 600px;
   margin: 5em auto 0 auto;
   padding: 50px;
-
   border: none;
   border-radius: var(--br-extra-soft);
   background-color: var(--clr-soft-white);
@@ -800,10 +799,15 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: hsl(250, 100%, 50%, 0.25);
+  background-color: hsla(250, 8%, 15%, 0.7);
 }
 
-dialog h2 {
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dialog-content h2 {
   text-align: center;
   margin-bottom: 1em;
   font-size: var(--fs-600);
@@ -841,7 +845,6 @@ dialog h2 {
 .modal-form input:focus-visible {
   box-shadow: 0 0 0 4px var(--clr-green);
   outline: 4px solid var(--clr-green);
-
 }
 
 button.btn-auth {
@@ -849,28 +852,28 @@ button.btn-auth {
   border-radius: 999em;
 }
 
-.modal-form p {
+.modal p {
   color: var(--clr-dark-gray);
 }
 
-.modal-form p:first-of-type {
+.modal p:first-of-type {
   margin-bottom: 1em;
 }
 
-.modal-form .disclaimer {
+.modal .disclaimer {
   font-size: var(--fs-300);
 }
 
-.modal-form a {
+.modal a {
   color: var(--clr-rich-black);
 }
 
-.modal-form a:hover,
-.modal-form a:focus-visible {
+.modal a:hover,
+.modal a:focus-visible {
   color: var(--clr-green);
 }
 
-.modal-form a:focus-visible {
+.modal a:focus-visible {
   outline: 2px solid var(--clr-green);
 }
 
