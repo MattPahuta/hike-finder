@@ -521,7 +521,7 @@ button.btn-secondary:focus-visible {
   padding: 2.5em 1em;
 }
 
-.explore-results-wrapper {
+.explore-results-container {
   display: grid;
   justify-content: center;
   gap: 2em;
@@ -641,7 +641,7 @@ button.btn-secondary:focus-visible {
 
 
 @media (min-width: 70rem) {
-  .explore-results-wrapper {
+  .explore-results-container {
     grid-template-columns: 600px 1fr;
     gap: 2.5em;
   }
@@ -785,17 +785,22 @@ button.btn-secondary:focus-visible {
 }
 
 /* Signup/Login form modals */
-dialog {
+.modal {
   z-index: 100;
   width: 90%;
   max-width: 600px;
   margin: 5em auto 0 auto;
-  padding: 50px;
   border: none;
   border-radius: var(--br-extra-soft);
   background-color: var(--clr-soft-white);
   color: var(--clr-rich-black);
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 600px) {
+  .modal {
+    padding: 50px;
+  }
 }
 
 dialog::backdrop {

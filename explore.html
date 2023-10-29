@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
+  <!-- Site header -->
   <header class="header">
     <div class="container header-container">
       <img src="./assets/HF-Primary.svg" alt="" class="logo">
@@ -24,7 +24,6 @@
             <a href="index.html" class="nav-link">Home</a>
           </li>
           <li>
-            <!-- make this link active -->
             <a href="explore.html" class="nav-link">Explore</a>
           </li>
           <li>
@@ -37,8 +36,9 @@
       </nav>
     </div>
   </header>
-
+  <!-- Explore main content -->
   <main id="main" class="main">
+    <!-- Hero section -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="container">
@@ -50,11 +50,10 @@
         </div>
       </div>
     </section>
-
+    <!-- Hike results section -->
     <section class="explore-results-section container">
       <h2 class="explore-title">Explore Nearby Trails</h2>
-      <!-- ToDo: rename to 'explore-results-container' -->
-      <div class="results-container explore-results-wrapper">
+      <div class="results-container explore-results-container">
         <ul class="explore-results-list">
           <li class="explore-card">
             <div class="result-img-container">
@@ -96,15 +95,11 @@
             </div>
           </li>
         </ul>
-
         <!-- Placeholder image for future dynamic map -->
         <img class="hikes-map" src="./assets/google-map-placeholder.png" alt="">
-
       </div>
-
     </section>
-
-    <!-- features section -->
+    <!-- Features section -->
     <section class="features">
       <div class="container features-container">
         <ul class="features-list">
@@ -126,22 +121,20 @@
         </ul>
       </div>
     </section>
-
   </main>
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-container">
       <nav>
         <ul class="footer-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="#">Explore</a></li>
-          <!-- ToDo: make these a.button style links -->
-          <li><a href="#">Log in</a></li>
-          <li><a href="#">Sign up</a></li>
+          <li><a href="#" data-modal="login">Log in</a></li>
+          <li><a href="#" data-modal="signup">Sign up</a></li>
         </ul>
       </nav>
       <div class="brand-container">
-        <img src="./assets/HF-Primary-Alt.svg" alt="" class="logo">
+        <img src="./assets/HF-Primary-Alt.svg" alt="HikeFinder logo" class="logo">
         <p class="copy">Copyright <span id="copy-year"></span>. HikeFinder</p>
       </div>
     </div>

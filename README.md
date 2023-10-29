@@ -32,6 +32,11 @@ Additional customization and enhancements
 - Use of dialog and modal elements
 - Symantic forms with basic client-side form validation
 
+Future enhancements:
+
+- Add additional content for hike details, linked from 'Learn More' buttons
+- Add embedded map asset for Explore page
+
 
 ### Screenshot
 

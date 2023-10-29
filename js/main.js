@@ -1,9 +1,27 @@
 // *** Mobile Navigation *** //
-const navList = document.getElementById('primary-navigation'); // ToDo: move inside navToggle listener?
-const navToggle = document.getElementById('mobile-nav-toggle');
 
-navToggle.addEventListener('click', () => {
+// const navToggle = document.getElementById('mobile-nav-toggle');
+
+// navToggle.addEventListener('click', () => {
+//   const body = document.querySelector('body');
+//   const navList = document.getElementById('primary-navigation');
+//   const visibility = navList.getAttribute('data-visible');
+
+//   if (visibility === 'false') {
+//     navList.setAttribute('data-visible', true);
+//     navToggle.setAttribute('aria-expanded', true);
+//   } else {
+//     navList.setAttribute('data-visible', false);
+//     navToggle.setAttribute('aria-expanded', false);
+//   }
+
+//   body.classList.toggle('no-scroll');
+// });
+
+// Hanle mobile navigation menu
+function handleMobileNav() {
   const body = document.querySelector('body');
+  const navList = document.getElementById('primary-navigation');
   const visibility = navList.getAttribute('data-visible');
 
   if (visibility === 'false') {
@@ -15,15 +33,14 @@ navToggle.addEventListener('click', () => {
   }
 
   body.classList.toggle('no-scroll');
-});
+}
 
 // Render signup/login dialog modal
 function renderDialogModal(modal) {
   const dialog = document.querySelector('#modal'); // get the dialog element
   dialog.innerHTML = ''; // clear dialog content
-
-  const dialogContent = document.createElement('div');
-  dialogContent.classList.add('dialog-content');
+  const dialogContent = document.createElement('div'); // create dialog content div
+  dialogContent.classList.add('dialog-content'); // add class to div
 
   let title, emailType, passwordType, submitButton, accountStatus; // initialize variables for modal content
   // Check if generating signup or login modal
@@ -62,9 +79,10 @@ function renderDialogModal(modal) {
 
 }
 
+// Handle showing/hiding dialog modal
 function handleDialogModal() {
-  const dialog = document.querySelector('dialog');
-  dialog.showModal();
+  const dialog = document.querySelector('dialog'); // get the dialog element
+  dialog.showModal(); // trigger showing the modal
 
   dialog.addEventListener("click", e => {
     const dialogDimensions = dialog.getBoundingClientRect()
@@ -85,10 +103,10 @@ document.getElementById('copy-year').textContent = dateSnapshot.getFullYear();
 
 // Event Listeners
 document.addEventListener('click', e => {
-  // ToDo: move navToggle listener here
-
+  if (e.target.id === 'mobile-nav-toggle') {
+    handleMobileNav();
+  }
   if (e.target.dataset.modal) {
     renderDialogModal(e.target.dataset.modal)
   }
-
 })
