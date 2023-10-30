@@ -45,8 +45,8 @@ Future enhancements:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Scrimba Scrim](https://scrimba.com/scrim/c3aD3Duy)
+- [Live Site](https://chipper-clafoutis-3cae74.netlify.app/)
 
 ## My process
 
