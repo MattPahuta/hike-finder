@@ -29,7 +29,7 @@ Users should be able to:
 Additional customization and enhancements
 
 - Updated design, typography, layout
-- Use of dialog and modal elements
+- Use of HTML dialog element to create dynamic modal forms
 - Symantic forms with basic client-side form validation
 
 Future enhancements:
@@ -40,9 +40,7 @@ Future enhancements:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+![](./assets/hikefinder-ss-home-dt.jpg)
 
 
 ### Links
@@ -58,7 +56,7 @@ Add a screenshot of your solution. The easiest way to do this is to use Firefox 
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
+- Vanilla JavaScript
 
 
 ### What I learned
@@ -67,45 +65,44 @@ Continued experience with CSS Grid and Flexbox.
 
 #### Results section - home page
 
-Given this section is meant to simulate a list of search results, it seemed important semantically to make this an unordered list. There were a couple of approaches I considered for the layout of this section. On larger screens, the design comp indicates that the list of results should alternate image/content orientation, producing a slight overlapping effect. 
+Given this section is intended to simulate a list of search results, it seemed important semantically to make this an unordered list. There were a couple of approaches I considered for the layout of this section. On larger screens, the design comp indicates that the list should alternate image/content orientation, producing an overlapping effect. 
 
-At first look of the design comp, it seemed like Grid was the best option to produce the offset layout of each result item. However, once I began experimenting, Flexbox ended up a cleaner and more efficient solution. I simply needed to allow the images in each list item to grow naturally and proportionately and utilize the order property on the 2nd list item's image to produce the offset effect, with minimal code.
+At first look at the design comp, it seemed like Grid was the best option to produce the offset layout of each result item. However, once I began experimenting, I settled on Flexbox as the cleaner, more efficient solution. I simply needed to allow the images within each list item to grow naturally and proportionately and utilize the nth-of-type pseudo-class to target my elements and do the flip with the order property.
 
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.home-result-item:nth-of-type(2n) .result-img-container {
+  order: 1;
 }
 ```
+
+I've used the dialog element a couple of times now, but this is probably the most robust implementation in my projects so far. Since there are no frameworks or libraries involved here, to simplify the creation of the sign-up and login form modals, and to keep the hard-coded HTML to a minimum, I used some straightforward JavaScript, including conditionals and template literals to construct the HTML. A portion of the renderDialogModal function is below:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  let title, emailType, passwordType, submitButton, accountStatus, passwordAutocomplete; // initialize variables for modal content
+  // Check if generating signup or login modal
+  if (modal === 'signup') {
+    // assign variables
+    title = 'Sign up';
+    emailType = 'new-email';
+    passwordType = 'new-password';
+    submitButton = 'Sign Up';
+    accountStatus = `Already have an account? <a href="#" data-modal="login">Login</a>`;
+    passwordAutocomplete = 'new-password';
+  }
 ```
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+This relatively simple 2-page website ended up with what I'm pretty sure is the most total CSS I've ever written from scratch. Honestly, it's bloated and I'm certain I have a lot of repeated code and inefficient class usage througout the file. This is a product of both poor planning at the beginning of the project and of having worked on it on-and-off over the course of 2-plus months. Things got lost in the build process as I went back and revised a given technique or switched up a design. In the future, I'll want to take a thorough look and prune the repetitive code and tighten up the CSS. This is actually a good project to revise with Sass, which I may end up doing. 
+
+Moving forward, I'll take the lesson of planning out my CSS better and documenting throughout to create a more efficient, modular system.
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [evilmartians.com](https://evilmartians.com/chronicles/html-best-practices-for-login-and-signup-forms) - This is a great reference when building login and sign-up forms, one I drew from for this project when building my simulated authentication forms.
 
 
 ## Author
 
-- Website - [Matt Pahuta](https://www.mattpahuta.com)
-- Twitter - [@mattpahuta](https://www.twitter.com/MattPahuta)
-
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+- Website - [mattpahuta.com](https://www.mattpahuta.com)
+- LinkedIn - [LinkedIn](www.linkedin.com/in/mattpahuta)

@@ -17,7 +17,7 @@
       <img src="./assets/HF-Primary.svg" alt="" class="logo">
       <nav>
         <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="navigation menu">
-          <span class="sr-only" aria-expanded="false">Menu</span>
+          <span class="sr-only">Menu</span>
         </button>
         <ul class="primary-navigation" id="primary-navigation" data-visible="false">
           <li class="active">
@@ -27,10 +27,10 @@
             <a href="explore.html" class="nav-link">Explore</a>
           </li>
           <li>
-            <button class="button nav-button btn-primary">Sign up</button>
+            <button class="button nav-button btn-primary" data-modal="signup">Sign up</button>
           </li>
           <li>
-            <button class="button nav-button btn-secondary">Log in</button>
+            <button class="button nav-button btn-secondary" data-modal="login">Log in</button>
           </li>
         </ul>
       </nav>
@@ -50,14 +50,13 @@
         </div>
       </div>
     </section>
-    <!-- Hike results section -->
+    <!-- Explore hike results section -->
     <section class="explore-results-section container">
       <h2 class="explore-title">Explore Nearby Trails</h2>
       <div class="results-container explore-results-container">
         <ul class="explore-results-list">
           <li class="explore-card">
             <div class="result-img-container">
-              <!-- ToDo: consolidate card-image/result-image classes -->
               <img src="./assets/tryon-creek.jpg" alt="" class="result-image card-image">
             </div>
             <div class="card-content">
@@ -122,7 +121,7 @@
       </div>
     </section>
   </main>
-  <!-- Footer -->
+  <!-- Site Footer -->
   <footer class="footer">
     <div class="container footer-container">
       <nav>

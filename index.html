@@ -17,7 +17,7 @@
       <img src="./assets/HF-Primary.svg" alt="" class="logo">
       <nav>
         <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="navigation menu">
-          <span class="sr-only" aria-expanded="false">Menu</span>
+          <span class="sr-only">Menu</span>
         </button>
         <ul class="primary-navigation" id="primary-navigation" data-visible="false">
           <li class="active">
@@ -38,6 +38,7 @@
   </header>
   <!-- Home main content -->
   <main id="main" class="main">
+    <!-- Hero section -->
     <section class="hero">
       <div class="hero-overlay"></div>
       <div class="container">
@@ -51,8 +52,8 @@
               <div class="icon-container">
                 <img src="./assets/magnifying-glass.png" alt="" class="search-icon">
               </div>
-              <label for="" class="sr-only">Search</label>
-              <input type="text" placeholder="Search by city">
+              <label for="search-city" class="sr-only">Search</label>
+              <input id="search-city" type="text" placeholder="Search by city">
               <button class="button btn-search">Search</button>
             </form>
           </div>
@@ -67,7 +68,7 @@
           <li class="home-result-item">
             <div class="result-img-container">
               <!-- ToDo: make result-image generic class, add specific home img class -->
-              <img src="./assets/Vernal-and-Nevada-Falls-via-Mist-Trail.webp" alt="" class="result-image">
+              <img src="./assets/Vernal-and-Nevada-Falls-via-Mist-Trail.webp" alt="" class="card-image">
             </div>
             <div class="result-content">
               <h3>Vernal and Nevada Falls via Mist Trail</h3>
@@ -79,7 +80,7 @@
           </li>
           <li class="home-result-item">
             <div class="result-img-container">
-              <img src="./assets/Upper-Yosemite-Falls-Trail.webp" alt="" class="result-image">
+              <img src="./assets/Upper-Yosemite-Falls-Trail.webp" alt="" class="card-image">
             </div>
             <div class="result-content">
               <h3>Upper Yosemite Falls Trail</h3>
@@ -91,7 +92,7 @@
           </li>
           <li class="home-result-item">
             <div class="result-img-container">
-              <img src="./assets/Lower-Yosemite-Falls-Trail.webp" alt="" class="result-image">
+              <img src="./assets/Lower-Yosemite-Falls-Trail.webp" alt="" class="card-image">
             </div>
             <div class="result-content">
               <h3>Lower Yosemite Falls Trail</h3>
@@ -133,7 +134,6 @@
         <ul class="footer-nav">
           <li><a href="#">Home</a></li>
           <li><a href="explore.html">Explore</a></li>
-          <!-- ToDo: make these a.button style links -->
           <li><a href="#" data-modal="login">Log in</a></li>
           <li><a href="#" data-modal="signup">Sign up</a></li>
         </ul>
